@@ -1,9 +1,11 @@
+// Section One
+
 import Image from "next/image";
 
 export default function SectionOne() {
   return (
-    <div className="flex-col flex items-center">
-      <div className="shadow-[1px_0px_42px_-11px_rgba(189,189,189,1)] w-[67px] h-[67px] rounded-[13px]  flex flex-row items-center justify-center    ">
+    <div className="flex-col mt-20 flex items-center">
+      <div className="shadow-[1px_0px_42px_-11px_rgba(189,189,189,1)] w-[67px] h-[67px] rounded-[13px] mt-12  flex flex-row items-center justify-center    ">
         <Image
           alt=""
           className="w-[30px]"

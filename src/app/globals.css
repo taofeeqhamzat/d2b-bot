@@ -19,4 +19,5 @@ body {
   background: var(--background);
   font-family: "Poppins", serif;
   height: 100vh;
+  position: relative;
 }
