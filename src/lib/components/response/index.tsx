@@ -8,7 +8,7 @@ interface ConversationProps {
 
 export default function Conversation({ messages }: ConversationProps) {
   return (
-    <div className="w-[654px] h-full mt-16">
+    <div className="min-[681px]:w-[654px] w-full min-[681px]:pr-0 min-[681px]:pl-0 pl-4 pr-4 h-full mt-16">
       {messages.map((message, index) => (
         <div key={index} className="question-block mt-6">
           {message.sender === "user" && (
