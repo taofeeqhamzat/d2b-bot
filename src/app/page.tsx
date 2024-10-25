@@ -18,7 +18,8 @@ interface RasaResponse {
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [showConversation, setShowConversation] = useState(false);
-  const url = "https://b438-102-91-93-240.ngrok-free.app";
+  const url =
+    "https://cors-anywhere.herokuapp.com/https://e715-102-91-93-240.ngrok-free.app";
 
   const endpoint = `${url}/webhooks/rest/webhook`;
 
@@ -59,7 +60,11 @@ export default function Home() {
 
   return (
     <div className="w-full relative h-fit flex-col flex items-center pb-60">
-      {showConversation ? <Conversation messages={messages} /> : <SectionOne />}
+      {showConversation ? (
+        <Conversation messages={messages} />
+      ) : (
+        <SectionOne onSendMessage={handleSendMessage} />
+      )}
       <ChatBox onSendMessage={handleSendMessage} />
     </div>
   );
