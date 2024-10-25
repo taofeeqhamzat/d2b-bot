@@ -18,9 +18,9 @@ interface RasaResponse {
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [showConversation, setShowConversation] = useState(false);
+  const url = "https://a26b-102-91-93-240.ngrok-free.app";
 
-  const rasaUrl =
-    "https://a26b-102-91-93-240.ngrok-free.app/webhooks/rest/webhook";
+  const endpoint = `${url}/webhooks/rest/webhook`;
 
   const handleSendMessage = async (message: string) => {
     setMessages((prevMessages) => [
@@ -31,7 +31,7 @@ export default function Home() {
     setShowConversation(true);
 
     try {
-      const response = await fetch(rasaUrl, {
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
