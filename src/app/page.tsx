@@ -18,7 +18,7 @@ interface RasaResponse {
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [showConversation, setShowConversation] = useState(false);
-  const url = "https://a26b-102-91-93-240.ngrok-free.app";
+  const url = "https://b438-102-91-93-240.ngrok-free.app";
 
   const endpoint = `${url}/webhooks/rest/webhook`;
 
