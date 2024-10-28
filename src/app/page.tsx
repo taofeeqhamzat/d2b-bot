@@ -18,10 +18,8 @@ interface RasaResponse {
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [showConversation, setShowConversation] = useState(false);
-  const url =
-    "https://cors-anywhere.herokuapp.com/https://e715-102-91-93-240.ngrok-free.app";
 
-  const endpoint = `${url}/webhooks/rest/webhook`;
+  const endpoint = `${process.env.NEXT_PUBLIC_RASA_URL}/webhooks/rest/webhook`;
 
   const handleSendMessage = async (message: string) => {
     setMessages((prevMessages) => [
